@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 abstract class StreamHandler {
   static const EventChannel _eventStream =
       const EventChannel('com.github.chinloyal/pusher_client_stream');
-  StreamSubscription _eventStreamSubscription;
+  late StreamSubscription _eventStreamSubscription;
 
   static Map<String, dynamic Function(dynamic)> _listeners = {};
 
